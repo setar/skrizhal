@@ -1,0 +1,78 @@
+# Проект "Скрижаль" — Файл: docker-compose.yml — Настройки запуска контейнеров
+# Версия: 2.0
+# Примечания: Удалён мастер-узел как постоянный сервис, добавлена роль controller_node.
+
+version: '3.9'
+services:
+  controller_node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: skrizhal_controller
+    tty: true
+    networks:
+      skrizhal_network:
+        aliases:
+          - controller_node
+    volumes:
+      - ./master/pki:/app/pki
+    ports:
+      - "7100:7100"
+    environment:
+      - NODE_ID=controller_node
+      - CONTROLLER_HOST=controller_node
+
+  node_0:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: skrizhal_node_0
+    tty: true
+    networks:
+      skrizhal_network:
+    volumes:
+      - ./data/node_0/certs:/app/data/certs
+      - ./data/node_0/private:/app/data/private
+    ports:
+      - "8001:8000"
+    environment:
+      - NODE_ID=node_0
+      - CONTROLLER_HOST=controller_node
+
+  node_1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: skrizhal_node_1
+    tty: true
+    networks:
+      skrizhal_network:
+    volumes:
+      - ./data/node_1/certs:/app/data/certs
+      - ./data/node_1/private:/app/data/private
+    ports:
+      - "8002:8000"
+    environment:
+      - NODE_ID=node_1
+      - CONTROLLER_HOST=controller_node
+
+  node_2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: skrizhal_node_2
+    tty: true
+    networks:
+      skrizhal_network:
+    volumes:
+      - ./data/node_2/certs:/app/data/certs
+      - ./data/node_2/private:/app/data/private
+    ports:
+      - "8003:8000"
+    environment:
+      - NODE_ID=node_2
+      - CONTROLLER_HOST=controller_node
+
+networks:
+  skrizhal_network:
+    driver: bridge
