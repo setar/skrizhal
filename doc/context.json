@@ -1,6 +1,32 @@
 {
     "project_name": "Скрижаль",
-    "version": "1.4",
+    "version": "2.0",
+    "repository": {
+        "root": "https://github.com/setar/skrizhal",
+        "context_file_raw": "https://raw.githubusercontent.com/setar/skrizhal/main/doc/context.json",
+        "files_raw": {
+            "Dockerfile": "https://raw.githubusercontent.com/setar/skrizhal/main/Dockerfile",
+            "blockchain.py": "https://raw.githubusercontent.com/setar/skrizhal/main/blockchain.py",
+            "docker-compose.yml": "https://raw.githubusercontent.com/setar/skrizhal/main/docker-compose.yml",
+            "periodic_check.py": "https://raw.githubusercontent.com/setar/skrizhal/main/periodic_check.py",
+            "LICENSE": "https://raw.githubusercontent.com/setar/skrizhal/main/LICENSE",
+            "config.ini": "https://raw.githubusercontent.com/setar/skrizhal/main/config.ini",
+            "env.sh": "https://raw.githubusercontent.com/setar/skrizhal/main/env.sh",
+            "requirements.txt": "https://raw.githubusercontent.com/setar/skrizhal/main/requirements.txt",
+            "README.md": "https://raw.githubusercontent.com/setar/skrizhal/main/README.md",
+            "crypto_utils.py": "https://raw.githubusercontent.com/setar/skrizhal/main/crypto_utils.py",
+            "make_env.sh": "https://raw.githubusercontent.com/setar/skrizhal/main/make_env.sh",
+            "run_nodes.py": "https://raw.githubusercontent.com/setar/skrizhal/main/run_nodes.py",
+            "attestation.py": "https://raw.githubusercontent.com/setar/skrizhal/main/attestation.py",
+            "block.py": "https://raw.githubusercontent.com/setar/skrizhal/main/block.py",
+            "node.py": "https://raw.githubusercontent.com/setar/skrizhal/main/node.py",
+            "update_md5.py": "https://raw.githubusercontent.com/setar/skrizhal/main/update_md5.py",
+            "doc/context.json": "https://raw.githubusercontent.com/setar/skrizhal/main/doc/context.json",
+            "doc/recovery_context.md": "https://raw.githubusercontent.com/setar/skrizhal/main/doc/recovery_context.md",
+            "doc/Описание_проекта_Скрижаль.md": "https://raw.githubusercontent.com/setar/skrizhal/main/doc/Описание_проекта_Скрижаль.md",
+            "doc/Структура_файлов.md": "https://raw.githubusercontent.com/setar/skrizhal/main/doc/Структура_файлов.md"
+        }
+    },
     "communication": {
         "style": "Ты",
         "preferences": [
@@ -11,7 +37,6 @@
             "Версии кода указываются в комментариях (пример: Версия 1.3).",
             "Общение на 'ты', кратко и по делу.",
             "Личное общение вне проекта — в отдельной беседе.",
-            "Всегда показывай полный листинг измененных в проекте файлов.",
             "Выводи листинг по одному файлу, запрашивая готовности продолжить начиная со второго."
         ]
     },
@@ -41,66 +66,26 @@
         ]
     },
     "current_status": {
-        "last_task": "Внедрение файлового обмена запросами на аттестацию через контроллер и подписанных сертификатов.",
-        "progress": "Текущая версия node.py — 2.3.7. Работает с ролями, группами, сроками действия сертификатов."
-    },
-    "files": {
-        "docker-compose.yml": {
-            "description": "Настройки для запуска контейнеров Docker.",
-            "version": "1.3",
-            "notes": "Добавлена сеть skrizhal_network и исправлен мапинг портов мастер-узла."
-        },
-        "node.py": {
-            "description": "Основной модуль реализации узлов сети.",
-            "version": "2.3.7",
-            "notes": "Добавлена поддержка ролей, групп и сроков действия сертификатов."
-        },
-        "run_nodes.py": {
-            "description": "Скрипт для тестирования запуска и взаимодействия узлов.",
-            "version": "1.4",
-            "notes": "Восстановлен функционал аттестации и публикации блоков."
-        },
-        "master_pki_management.py": {
-            "description": "Скрипт управления PKI мастер-узлом.",
-            "version": "2.1.1",
-            "notes": "Добавлена поддержка ролей, групп и сроков действия сертификатов."
-        },
-        "crypto_utils.py": {
-            "description": "Утилиты для криптографии.",
-            "version": "1.1",
-            "notes": "Добавлена функция `sign_message` для подписания данных."
-        }
+        "last_task": "Обновление версии проекта на 2.0 и добавление ссылок на raw-формат файлов.",
+        "progress": "Переход на GitHub завершён. Контекст обновлён для работы через репозиторий."
     },
     "recent_changes": [
-        "Добавлена сеть Docker для обеспечения связи между узлами.",
-        "Исправлены порты мастер-узла и добавлены дополнительные логи в node.py.",
-        "Реализована файловая обработка запросов на аттестацию через контроллер.",
-        "Внедрены подписанные сертификаты для узлов с криптографией RSA."
+        "Переход на GitHub и централизованное управление версиями.",
+        "Добавлены ссылки на все файлы проекта в raw-формате.",
+        "Добавлена версия 2.0, отражающая изменение стратегии работы с проектом."
+    ],
+    "version_history": {
+        "1.x": "Начальная версия проекта. Разработка велась локально.",
+        "2.0": "Проект перенесён на GitHub. Добавлены ссылки на файлы в raw-формате."
+    },
+    "future_tasks": [
+        "Настроить CI/CD с использованием GitHub Actions.",
+        "Добавить автоматизированное тестирование и статический анализ кода.",
+        "Оптимизировать производительность узлов node.py."
     ],
     "notes": [
-        "- Проблема с файловой системой требует перезагрузки сессии.",
-        "- Контекст восстановлен для продолжения работы.",
-        "- Файл `doc/context.json` обновляется при изменениях в проекте или методологии.",
+        "- Контекст теперь содержит историю версий.",
+        "- Указаны текущие задачи для развития проекта.",
         "- Сохранять стиль и примечания исходных файлов при обновлениях."
-    ],
-    "archive_analysis": {
-        "root_directory": "skrizhal_protocol/",
-        "ignored_folders": [
-            ".git",
-            "data",
-            "master/pki"
-        ],
-        "config_file": "config.ini",
-        "key_section": "doc (содержит концепт проекта Скрижаль)",
-        "instructions": [
-            "Распаковать архив в отдельную директорию.",
-            "Игнорировать папки `.git`, `data`, `master/pki`, `__pycache__` так как они содержат рабочие данные и контроль версий.",
-            "Основным корнем проекта является папка `skrizhal_protocol/`.",
-            "Ключевой конфигурационный файл находится в корне проекта под именем `config.ini`.",
-            "Основной концепт проекта описан в разделе `doc`.",
-            "После распаковки проверить корректность структуры и наличия всех необходимых файлов.",
-            "Для распаковки архива используйте команду: `tar -xjf skrizhal_protocol.tar.bz2 -C <путь>`.",
-            "После распаковки вручную убедитесь, что структура каталогов сохранена, и отсутствуют пропуски вложенных файлов."
-        ]
-    }
+    ]
 }
