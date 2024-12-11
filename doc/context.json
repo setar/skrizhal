@@ -3,28 +3,28 @@
     "version": "2.0",
     "repository": {
         "root": "https://github.com/setar/skrizhal",
-        "context_file_raw": "https://raw.githubusercontent.com/setar/skrizhal/main/doc/context.json",
+        "context_file_raw": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/doc/context.json",
         "files_raw": {
-            "Dockerfile": "https://raw.githubusercontent.com/setar/skrizhal/main/Dockerfile",
-            "blockchain.py": "https://raw.githubusercontent.com/setar/skrizhal/main/blockchain.py",
-            "docker-compose.yml": "https://raw.githubusercontent.com/setar/skrizhal/main/docker-compose.yml",
-            "periodic_check.py": "https://raw.githubusercontent.com/setar/skrizhal/main/periodic_check.py",
-            "LICENSE": "https://raw.githubusercontent.com/setar/skrizhal/main/LICENSE",
-            "config.ini": "https://raw.githubusercontent.com/setar/skrizhal/main/config.ini",
-            "env.sh": "https://raw.githubusercontent.com/setar/skrizhal/main/env.sh",
-            "requirements.txt": "https://raw.githubusercontent.com/setar/skrizhal/main/requirements.txt",
-            "README.md": "https://raw.githubusercontent.com/setar/skrizhal/main/README.md",
-            "crypto_utils.py": "https://raw.githubusercontent.com/setar/skrizhal/main/crypto_utils.py",
-            "make_env.sh": "https://raw.githubusercontent.com/setar/skrizhal/main/make_env.sh",
-            "run_nodes.py": "https://raw.githubusercontent.com/setar/skrizhal/main/run_nodes.py",
-            "attestation.py": "https://raw.githubusercontent.com/setar/skrizhal/main/attestation.py",
-            "block.py": "https://raw.githubusercontent.com/setar/skrizhal/main/block.py",
-            "node.py": "https://raw.githubusercontent.com/setar/skrizhal/main/node.py",
-            "update_md5.py": "https://raw.githubusercontent.com/setar/skrizhal/main/update_md5.py",
-            "doc/context.json": "https://raw.githubusercontent.com/setar/skrizhal/main/doc/context.json",
-            "doc/recovery_context.md": "https://raw.githubusercontent.com/setar/skrizhal/main/doc/recovery_context.md",
-            "doc/Описание_проекта_Скрижаль.md": "https://raw.githubusercontent.com/setar/skrizhal/main/doc/Описание_проекта_Скрижаль.md",
-            "doc/Структура_файлов.md": "https://raw.githubusercontent.com/setar/skrizhal/main/doc/Структура_файлов.md"
+            "Dockerfile": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/Dockerfile",
+            "blockchain.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/blockchain.py",
+            "docker-compose.yml": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/docker-compose.yml",
+            "periodic_check.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/periodic_check.py",
+            "LICENSE": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/LICENSE",
+            "config.ini": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/config.ini",
+            "env.sh": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/env.sh",
+            "requirements.txt": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/requirements.txt",
+            "README.md": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/README.md",
+            "crypto_utils.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/crypto_utils.py",
+            "make_env.sh": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/make_env.sh",
+            "run_nodes.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/run_nodes.py",
+            "attestation.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/attestation.py",
+            "block.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/block.py",
+            "node.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/node.py",
+            "update_md5.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/update_md5.py",
+            "doc/context.json": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/doc/context.json",
+            "doc/recovery_context.md": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/doc/recovery_context.md",
+            "doc/Описание_проекта_Скрижаль.md": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/doc/Описание_проекта_Скрижаль.md",
+            "doc/Структура_файлов.md": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/doc/Структура_файлов.md"
         }
     },
     "communication": {
@@ -66,13 +66,18 @@
         ]
     },
     "current_status": {
-        "last_task": "Обновление версии проекта на 2.0 и добавление ссылок на raw-формат файлов.",
-        "progress": "Переход на GitHub завершён. Контекст обновлён для работы через репозиторий."
+        "last_task": "Добавление ссылок на файлы проекта в raw-формате.",
+        "progress": "Текущая версия node.py — 2.3.7. Работает с ролями, группами, сроками действия сертификатов."
     },
     "recent_changes": [
-        "Переход на GitHub и централизованное управление версиями.",
-        "Добавлены ссылки на все файлы проекта в raw-формате.",
-        "Добавлена версия 2.0, отражающая изменение стратегии работы с проектом."
+        "Добавлена ссылка на корень репозитория.",
+        "Добавлена ссылка на raw-формат файла контекста.",
+        "Добавлены ссылки на остальные файлы проекта в raw-формате.",
+        "Добавлены ссылки на файлы документации в raw-формате.",
+        "Добавлена сеть Docker для обеспечения связи между узлами.",
+        "Исправлены порты мастер-узла и добавлены дополнительные логи в node.py.",
+        "Реализована файловая обработка запросов на аттестацию через контроллер.",
+        "Внедрены подписанные сертификаты для узлов с криптографией RSA."
     ],
     "version_history": {
         "1.x": "Начальная версия проекта. Разработка велась локально.",
