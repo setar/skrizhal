@@ -1,9 +1,9 @@
 {
     "project_name": "Скрижаль",
-    "version": "2.0",
+    "version": "2.1",
     "repository": {
         "root": "https://github.com/setar/skrizhal",
-        "context_file_raw": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/doc/context.json",
+        "context_file_raw": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/context.json",
         "files_raw": {
             "Dockerfile": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/Dockerfile",
             "blockchain.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/blockchain.py",
@@ -21,7 +21,7 @@
             "block.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/block.py",
             "node.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/node.py",
             "update_md5.py": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/update_md5.py",
-            "doc/context.json": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/doc/context.json",
+            "context.json": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/context.json",
             "doc/recovery_context.md": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/doc/recovery_context.md",
             "doc/Описание_проекта_Скрижаль.md": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/doc/Описание_проекта_Скрижаль.md",
             "doc/Структура_файлов.md": "https://raw.githubusercontent.com/setar/skrizhal/refs/heads/main/doc/Структура_файлов.md"
@@ -36,8 +36,7 @@
             "Полные листинги файлов при изменениях.",
             "Версии кода указываются в комментариях (пример: Версия 1.3).",
             "Общение на 'ты', кратко и по делу.",
-            "Личное общение вне проекта — в отдельной беседе.",
-            "Выводи листинг по одному файлу, запрашивая готовности продолжить начиная со второго."
+            "Выводи листинг по одному файлу, не используя canvas, запрашивая готовности продолжить начиная со второго."
         ]
     },
     "methodology": {
@@ -81,7 +80,8 @@
     ],
     "version_history": {
         "1.x": "Начальная версия проекта. Разработка велась локально.",
-        "2.0": "Проект перенесён на GitHub. Добавлены ссылки на файлы в raw-формате."
+        "2.0": "Проект перенесён на GitHub. Добавлены ссылки на файлы в raw-формате.",
+        "2.1": "Перенос файла контекста из папки doc в корень проекта для унификации структуры."
     },
     "future_tasks": [
         "Настроить CI/CD с использованием GitHub Actions.",
